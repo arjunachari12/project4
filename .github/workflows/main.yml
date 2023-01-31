@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Greet user
+        run: echo building
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet user
+        run: echo testing
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet user
+        run: echo deploy
